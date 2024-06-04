@@ -1,0 +1,72 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: FEES-SERVICE
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/feesdb
+    username: sa
+    password:
+    platform: h2
+  h2:
+    console:
+      enabled: true
+      path: /h2-ui
+
+# for Spring Data JPA
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+        recordExceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.util.concurrent.TimeoutException
+          - java.io.IOException
+    instances:
+      student-service:
+        baseConfig: default
+  retry:
+    instances:
+      student-service:
+        maxRetryAttempts: 3
+        waitDuration: 500ms
+        retryExceptions:
+          - java.io.IOException
+          - org.springframework.web.client.HttpServerErrorException
+          - java.util.concurrent.TimeoutException
+
+student:
+  service:
+    url:
+      base: http://localhost:9090
+      id: ${student.service.url.base}/api/student/v1/
+
+#Application start publish data to Zipkin
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411/
+
+

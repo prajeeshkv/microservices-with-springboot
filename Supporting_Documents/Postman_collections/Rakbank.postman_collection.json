@@ -1,0 +1,1062 @@
+{
+	"info": {
+		"_postman_id": "92cdc7a8-3578-4d0e-a7cc-1eb75cb27c1f",
+		"name": "Rakbank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1271199"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Save",
+					"item": [
+						{
+							"name": "Save Student 1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"ZZZZSharaf\",\r\n  \"lastName\": \"Ar\",\r\n  \"studentId\": \"986611\",\r\n  \"mobileNumber\": \"+971503458990\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save Student 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"PRjeesh\",\r\n  \"lastName\": \"Kv\",\r\n  \"studentId\": \"112233\",\r\n  \"mobileNumber\": \"+971503454001\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save Student - Bad Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"111\",\r\n  \"lastName\": \"K V\",\r\n  \"studentId\": \"3356885677\",\r\n  \"mobileNumber\": \"+9715078455\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"item": [
+						{
+							"name": "Update Student 1",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Sharaf\",\r\n    \"lastName\": \"Aboobacker\",\r\n    \"studentId\": \"989898\",\r\n    \"mobileNumber\": \"+971503458990\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Student 2",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1553,\r\n    \"firstName\": \"Prajeesh\",\r\n    \"lastName\": \"K V\",\r\n    \"studentId\": \"110011\",\r\n    \"mobileNumber\": \"+971503458001\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Student, Error Without Id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Prajeesh\",\r\n    \"lastName\": \"K V\",\r\n    \"studentId\": \"114499\",\r\n    \"mobileNumber\": \"+9715034584466\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get",
+					"item": [
+						{
+							"name": "Get All Students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Student By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/student/v1/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"student",
+										"v1",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Student By Student Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/student/v1/studentid/989898",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"student",
+										"v1",
+										"studentid",
+										"989898"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Active Students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/student/v1/active",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"student",
+										"v1",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All In Active Students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/student/v1/inactive",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"student",
+										"v1",
+										"inactive"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "Delete Student",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/student/v1/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"student",
+										"v1",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Gateway - Student",
+			"item": [
+				{
+					"name": "Save",
+					"item": [
+						{
+							"name": "Save Student 1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"Daniel\",\r\n  \"lastName\": \"John\",\r\n  \"studentId\": \"139854\",\r\n  \"mobileNumber\": \"+971503458458\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9191/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save Student 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"Raj\",\r\n  \"lastName\": \"Kumarzz\",\r\n  \"studentId\": \"561098\",\r\n  \"mobileNumber\": \"+971503455108\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9191/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save Student - Bad Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"111\",\r\n  \"lastName\": \"K V\",\r\n  \"studentId\": \"3356885677\",\r\n  \"mobileNumber\": \"+9715078455\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9191/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "invalid mobile - Save Student",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"Daniel\",\r\n  \"lastName\": \"John\",\r\n  \"studentId\": \"456789\",\r\n  \"mobileNumber\": \"+97150345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9191/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"item": [
+						{
+							"name": "Update Student",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 6,\r\n    \"firstName\": \"Raj\",\r\n    \"lastName\": \"Kumar\",\r\n    \"studentId\": \"561098\",\r\n    \"mobileNumber\": \"+971503455108\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9191/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Student, Error Without Id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Prajeesh\",\r\n    \"lastName\": \"K V\",\r\n    \"studentId\": \"114499\",\r\n    \"mobileNumber\": \"+9715034584466\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9191/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get",
+					"item": [
+						{
+							"name": "Get All Students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/api/student/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"student",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Student By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/api/student/v1/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"student",
+										"v1",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Student By Student Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/api/student/v1/studentid/989898",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"student",
+										"v1",
+										"studentid",
+										"989898"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Active Students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/api/student/v1/active",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"student",
+										"v1",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All InActive Students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/api/student/v1/inactive",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"student",
+										"v1",
+										"inactive"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "Delete Student",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/api/student/v1/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"student",
+										"v1",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Fees",
+			"item": [
+				{
+					"name": "Save",
+					"item": [
+						{
+							"name": "Save Fees",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"studentId\": 1,\r\n  \"grade\": 2,\r\n  \"amount\": 7500.00,\r\n  \"currency\": \"AED\",\r\n  \"cardNumber\": \"4567-7843-3211-9065\",\r\n  \"cardType\": \"MASTER_CARD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/fees/v1/payment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"fees",
+										"v1",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Receipt",
+					"item": [
+						{
+							"name": "Get Payment Receipt",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"studentId\": 4,\r\n  \"grade\": 1,\r\n  \"amount\": 500.45,\r\n  \"currency\": \"AED\",\r\n  \"referenceId\": 132318047127,\r\n  \"cardNumber\": \"4567-7843-3211-9065\",\r\n  \"cardType\": \"MASTER_CARD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/fees/v1/payment/receipt/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"fees",
+										"v1",
+										"payment",
+										"receipt",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Circut breaker",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"studentId\": 4,\r\n  \"grade\": 1,\r\n  \"amount\": 500.45,\r\n  \"currency\": \"AED\",\r\n  \"referenceId\": 132318047127,\r\n  \"cardNumber\": \"4567-7843-3211-9065\",\r\n  \"cardType\": \"MASTER_CARD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/fees/v1/payment/receipt/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"fees",
+										"v1",
+										"payment",
+										"receipt",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Payment Receipt 1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"studentId\": 4,\r\n  \"grade\": 1,\r\n  \"amount\": 500.45,\r\n  \"currency\": \"AED\",\r\n  \"referenceId\": 132318047127,\r\n  \"cardNumber\": \"4567-7843-3211-9065\",\r\n  \"cardType\": \"MASTER_CARD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/fees/v1/payment/receipt/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"fees",
+										"v1",
+										"payment",
+										"receipt",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Webclient Receipt",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"studentId\": 4,\r\n  \"grade\": 1,\r\n  \"amount\": 500.45,\r\n  \"currency\": \"AED\",\r\n  \"referenceId\": 132318047127,\r\n  \"cardNumber\": \"4567-7843-3211-9065\",\r\n  \"cardType\": \"MASTER_CARD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/fees/v1/webclient/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"fees",
+										"v1",
+										"webclient",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Gateway - Fees",
+			"item": [
+				{
+					"name": "Save",
+					"item": [
+						{
+							"name": "Save Fees",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"studentId\": 1555,\r\n  \"grade\": 5,\r\n  \"amount\": 7500.00,\r\n  \"currency\": \"AED\",\r\n  \"cardNumber\": \"4567-7843-3211-9065\",\r\n  \"cardType\": \"MASTER_CARD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9191/api/fees/v1/payment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"api",
+										"fees",
+										"v1",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Receipt",
+					"item": [
+						{
+							"name": "Get Payment Receipt",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"studentId\": 4,\r\n  \"grade\": 1,\r\n  \"amount\": 500.45,\r\n  \"currency\": \"AED\",\r\n  \"referenceId\": 132318047127,\r\n  \"cardNumber\": \"4567-7843-3211-9065\",\r\n  \"cardType\": \"MASTER_CARD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/fees/v1/payment/receipt/1555",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"fees",
+										"v1",
+										"payment",
+										"receipt",
+										"1555"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Circut breaker",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"studentId\": 4,\r\n  \"grade\": 1,\r\n  \"amount\": 500.45,\r\n  \"currency\": \"AED\",\r\n  \"referenceId\": 132318047127,\r\n  \"cardNumber\": \"4567-7843-3211-9065\",\r\n  \"cardType\": \"MASTER_CARD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/fees/v1/payment/receipt/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"fees",
+										"v1",
+										"payment",
+										"receipt",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Payment Receipt 1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"studentId\": 4,\r\n  \"grade\": 1,\r\n  \"amount\": 500.45,\r\n  \"currency\": \"AED\",\r\n  \"referenceId\": 132318047127,\r\n  \"cardNumber\": \"4567-7843-3211-9065\",\r\n  \"cardType\": \"MASTER_CARD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/fees/v1/payment/receipt/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"fees",
+										"v1",
+										"payment",
+										"receipt",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Webclient Receipt",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"studentId\": 4,\r\n  \"grade\": 1,\r\n  \"amount\": 500.45,\r\n  \"currency\": \"AED\",\r\n  \"referenceId\": 132318047127,\r\n  \"cardNumber\": \"4567-7843-3211-9065\",\r\n  \"cardType\": \"MASTER_CARD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/fees/v1/webclient/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"fees",
+										"v1",
+										"webclient",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

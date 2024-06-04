@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Receipt</title>
+    <style>
+        .blue-block {
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="blue-block">
+    <h2>Your Transaction is Successful</h2>
+</div>
+
+
+<div>
+    <p>Hi, <span th:text="${student.firstName}"></span> <span th:text="${student.LastName}">,</span></p>
+    <p>Congratulations!, Your payment transaction is successful with  <span th:text="${student.schoolName}"></span> for <span th:text="${student.firstName}"></span> <span th:text="${student.LastName}"> student of <span th:text="${student.grade}">
+    <p>Kindly find the details below</p>
+    <br><br><br>
+    <h2>Transaction Details</h2>
+    <p>Date and Time : <span th:text="${student.schoolName}"></span></p>
+    <p>Student Name  : <span th:text="${student.firstName}"></span> <span th:text="${student.LastName}"></p>
+    <p>Student Id    : <span th:text="${student.studentId}"></span></p>
+    <p>Reference #   : <span th:text="${fees.referenceId}"></span></p>
+    <p>Card #        : <span th:text="${fees.cardNumber}"></span></p>
+    <p>Card Type     : <span th:text="${fees.cardType}"></span></p>
+
+
+</div>
+
+<div>
+    <div class="blue-block">
+        <h2>Purchase Details</h2>
+    </div>
+    <p>Tution Fees        <span th:text="${fees.currency}"></span>   <span th:text="${fees.amount}"></span></p>
+    <p>1 x Grade 1 </p>
+
+</div>
+</body>
+</html>
