@@ -3,12 +3,16 @@ Student Microservices and Fees Microservices with Discovery Server, API Gateway 
 
 Architecture diagram
 ====================
+![Microservice Architecture](https://github.com/prajeeshkv/microservices-with-springboot/assets/6111656/f7a3ff99-e861-47be-8a83-37f144fcea15)
 
 
 Database Structure
 ==================
+![Database table structure](https://github.com/prajeeshkv/microservices-with-springboot/assets/6111656/988ed548-df35-414b-aa0e-8c6422c0b68d)
 
-
+Receipt with Thymeleaf
+==================
+<img width="809" alt="image" src="https://github.com/prajeeshkv/microservices-with-springboot/assets/6111656/2e862fe7-db1e-4c96-99dc-9180b6b522ab">
 
 This microservices project is for student management and fee collection management
 
@@ -30,7 +34,7 @@ Fee Service is used for payment of a student and Generating receipt
 1.For intercommunication we used : Webclient and restTemplate 
 	Save Fees     -> inter micro communication using RestTemplate (for fetching sudent details)
 	Get Receipt   -> inter micro communication using WebClient  (for fetching sudent details)
-2. Report generation used : Thymeleaf
+2. Thymeleaf Receipt generation 
 3. Database : H2
 4. mapstruct is used to mapp entity to dto and vicecersa
 5. Dto class is used not to expose the sensitive entity to outside
@@ -111,6 +115,7 @@ Steps
 5. configure the project
 	Run -> Edit configurations -> add new configuration (+) -> Select maven -> in the input field under Run Label
 	type 'spring-boot:run' (will autopopulate) -> apply and run
+<img width="599" alt="spring-boot run" src="https://github.com/prajeeshkv/microservices-with-springboot/assets/6111656/81a96d6f-6c14-41f1-8cd8-0d257d2d7be2">
 
 import and run the remaining 3 project same way (step 4 and 5)
 Order:
@@ -134,6 +139,7 @@ Check Type below urls in  browser
       JDBC URL: jdbc:h2:~/feesdb
       User Name: sa
       Password: 
+![H2 Database Connection](https://github.com/prajeeshkv/microservices-with-springboot/assets/6111656/fb04726b-216e-41ba-972e-142da3964362)
 
 6. Install postman ( v11.1.14) 
  Import the postman collection to postman (collection location : microservices-with-springboot\Supporting Documents\Postman collections)
