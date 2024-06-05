@@ -23,7 +23,10 @@ Components of this project 4 Microservices
 4. Gateway Server Service 
 
 and
-5. Zipkin server for distributed tracing
+5. Zipkin server is used for distributed tracing
+	We can see the logging for each request
+<img width="957" alt="zipkin-trace-1" src="https://github.com/prajeeshkv/microservices-with-springboot/assets/6111656/a5b30996-41e2-40c8-9139-497263fd4943">
+
 
 
 Description and used different components in this project
