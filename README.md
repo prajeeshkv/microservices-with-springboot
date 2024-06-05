@@ -66,9 +66,13 @@ GATEWAY-SERVICE   : 9191
 Urls
 ----- 
 url for DISCOVERY-SERVICE : http://localhost:8761/
+
 url for STUDENT-SERVICE swagger-ui : http://localhost:9090/swagger-ui/index.html#/
+
 url for STUDENT-SERVICE H2 db :  http://localhost:9090/h2-ui
+
 url for FEE-SERVICE swagger-ui : http://localhost:8082/swagger-ui/index.html
+
 url for FEE-SERVICE H2 db : localhost:8082/h2-ui
 
 in browser
