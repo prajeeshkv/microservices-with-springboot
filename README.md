@@ -82,10 +82,15 @@ Thymeleaf for getting receipt : localhost:8082/api/fees/v1/receipt/1
 Zipkin
 ------- 
 Zipkin download : https://zipkin.io/pages/quickstart.html
+
 	- Download the zipkin jar and run using  command
+ 
 	- java -jar zipkin-server-3.4.0-exec.jar
+ 
 Zipkin Version  : 3.4.0  
+
 Zipkin url      : http://127.0.0.1:9411/
+
 
 
 
